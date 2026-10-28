@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lesson 2: Headings and lists - Baby's First Web Class</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="warning">Student project for VIS 412. This is not an official learning site. <a href="#lesson">Skip to page content</a></p>
+<div class="ie-window">
+    <!-- The old browser frame is decoration. Use the links below it. -->
+    <div class="title-bar">
+        <span class="window-decor" aria-hidden="true">_ &nbsp; □ &nbsp; X</span>
+        <img class="ie-icon" src="images/internetexplorer6icon.png" alt="">
+        Baby's First Web Class - Microsoft Internet Explorer
+    </div>
+    <div class="menu-bar" aria-hidden="true">File Edit View Favorites Tools Help</div>
+    <div class="toolbar"><a href="index.html">Home</a> <a href="glossary.html">Find a tag</a> <a href="resources.html">Sources</a></div>
+    <div class="address-bar">Address: <span class="address">babys-first-web-class / structure.html</span></div>
+    <div class="browser-content">
+        <header class="site-heading">
+            <h1>Baby's First Web Class</h1>
+            <p>~ a small place to learn the basics ~</p>
+            <span class="badge">HTML + CSS | Made by Zahra</span>
+        </header>
+        <!-- Same directory on the lesson and reference pages. -->
+        <nav class="sidebar" aria-label="Main navigation">
+            <p><strong>Site directory</strong></p>
+                <a href="index.html">Home</a>
+                <a href="html.html">1. Basic HTML</a>
+                <a href="structure.html" aria-current="page">2. Headings &amp; lists &lt;-- you are here</a>
+                <a href="css.html">3. Basic CSS</a>
+                <a href="colours.html">4. Colours &amp; fonts</a>
+                <a href="links.html">5. Links &amp; images</a>
+                <a href="layout.html">6. Boxes &amp; layout</a>
+                <a href="video.html">7. Adding a video</a>
+                <a href="accessibility.html">8. Accessibility</a>
+                <a href="details.html">9. Click-open answers</a>
+                <a href="practice.html">10. Put it together</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="resources.html">Resources</a>
+                <a href="faq.html">FAQ</a>
+                <a href="reflection.html">Reflection</a>
+        </nav>
+        <main class="lesson" id="lesson" tabindex="-1">
+            <h2>Lesson 2: Headings and lists</h2>
+<p class="note"><strong>Goal:</strong> Choose a heading, a paragraph and the right kind of list.</p>
+<p>A page is easier to read when its parts have names. Use a heading for a title, a paragraph for a sentence, and a list for a group of items.</p>
+<h3>Headings have levels</h3>
+<p>Use one <code>&lt;h1&gt;</code> for the main page title. Use <code>&lt;h2&gt;</code> for sections below it and <code>&lt;h3&gt;</code> for smaller sections. Pick the level for its meaning, not its size.</p>
+<pre tabindex="0"><code>&lt;h1&gt;My recipe page&lt;/h1&gt;
+&lt;h2&gt;Toast&lt;/h2&gt;
+&lt;p&gt;A small breakfast.&lt;/p&gt;
+&lt;h3&gt;Ingredients&lt;/h3&gt;</code></pre>
+<h3>Bullets or numbers?</h3>
+<p><code>&lt;ul&gt;</code> makes a bulleted list. Use it when order does not matter. <code>&lt;ol&gt;</code> makes a numbered list. Use it for steps. Each item needs <code>&lt;li&gt;</code>.</p>
+<pre tabindex="0"><code>&lt;ul&gt;
+    &lt;li&gt;Bread&lt;/li&gt;
+    &lt;li&gt;Butter&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;Toast the bread.&lt;/li&gt;
+    &lt;li&gt;Add butter.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<div class="box"><h3>Result</h3><p><strong>Ingredients</strong></p><ul><li>Bread</li><li>Butter</li></ul><p><strong>Steps</strong></p><ol><li>Toast the bread.</li><li>Add butter.</li></ol></div>
+<h3>Give the page a structure</h3>
+<p>These elements describe whole areas. They do not add a special design by themselves.</p>
+<pre tabindex="0"><code>&lt;header&gt;
+    &lt;h1&gt;My recipe page&lt;/h1&gt;
+&lt;/header&gt;
+&lt;nav&gt;
+    &lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+    &lt;h2&gt;Toast&lt;/h2&gt;
+    &lt;p&gt;A small breakfast.&lt;/p&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+    &lt;p&gt;Made for class.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+<h3>Try it</h3><p>Add an ingredients list and a numbered list of steps to your practice page.</p><p><strong>Check:</strong> The ingredients have bullets and the steps have numbers. The heading describes what follows it.</p>
+<h3>If it goes wrong</h3><p>Do not use a heading just to make text bigger. A normal sentence belongs in a paragraph. CSS can change its size later.</p>
+<p>Next, connect a CSS file to change the appearance.</p>
+            <p><a href="html.html">&lt; Previous</a> | <a href="css.html">Next &gt;</a></p>
+            <p><a href="#lesson">Back to page heading</a></p>
+        </main>
+        <footer class="page-footer">
+            <hr>
+            <p class="small-print">Baby's First Web Class | VIS 412 | Zahra</p>
+            
+        </footer>
+    </div>
+    <div class="status-bar">Done. &nbsp; | &nbsp; Local pages. No sign-up needed.</div>
+</div>
+</body>
+</html>

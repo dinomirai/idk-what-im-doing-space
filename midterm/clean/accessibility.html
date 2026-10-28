@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lesson 8: Accessibility - Baby's First Web Class</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="warning">Student project for VIS 412. This is not an official learning site. <a href="#lesson">Skip to page content</a></p>
+<div class="ie-window">
+    <!-- The old browser frame is decoration. Use the links below it. -->
+    <div class="title-bar">
+        <span class="window-decor" aria-hidden="true">_ &nbsp; □ &nbsp; X</span>
+        <img class="ie-icon" src="images/internetexplorer6icon.png" alt="">
+        Baby's First Web Class - Microsoft Internet Explorer
+    </div>
+    <div class="menu-bar" aria-hidden="true">File Edit View Favorites Tools Help</div>
+    <div class="toolbar"><a href="index.html">Home</a> <a href="glossary.html">Find a tag</a> <a href="resources.html">Sources</a></div>
+    <div class="address-bar">Address: <span class="address">babys-first-web-class / accessibility.html</span></div>
+    <div class="browser-content">
+        <header class="site-heading">
+            <h1>Baby's First Web Class</h1>
+            <p>~ a small place to learn the basics ~</p>
+            <span class="badge">HTML + CSS | Made by Zahra</span>
+        </header>
+        <!-- Same directory on the lesson and reference pages. -->
+        <nav class="sidebar" aria-label="Main navigation">
+            <p><strong>Site directory</strong></p>
+                <a href="index.html">Home</a>
+                <a href="html.html">1. Basic HTML</a>
+                <a href="structure.html">2. Headings &amp; lists</a>
+                <a href="css.html">3. Basic CSS</a>
+                <a href="colours.html">4. Colours &amp; fonts</a>
+                <a href="links.html">5. Links &amp; images</a>
+                <a href="layout.html">6. Boxes &amp; layout</a>
+                <a href="video.html">7. Adding a video</a>
+                <a href="accessibility.html" aria-current="page">8. Accessibility &lt;-- you are here</a>
+                <a href="details.html">9. Click-open answers</a>
+                <a href="practice.html">10. Put it together</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="resources.html">Resources</a>
+                <a href="faq.html">FAQ</a>
+                <a href="reflection.html">Reflection</a>
+        </nav>
+        <main class="lesson" id="lesson" tabindex="-1">
+            <h2>Lesson 8: Accessibility</h2>
+<p class="note"><strong>Goal:</strong> Check a page for readable content, useful labels and keyboard access.</p>
+<p>Accessibility means people can use the page in different ways. Someone might enlarge text, use a keyboard instead of a mouse, or listen with a screen reader.</p>
+<h3>What is WCAG?</h3>
+<p>WCAG stands for Web Content Accessibility Guidelines. W3C publishes them. WCAG 2.2 groups its guidance under four ideas:</p>
+<ul><li><strong>Perceivable:</strong> people can get the information, including text alternatives for pictures.</li><li><strong>Operable:</strong> people can use the controls, including with a keyboard.</li><li><strong>Understandable:</strong> labels, instructions and navigation make sense.</li><li><strong>Robust:</strong> the HTML works with browsers and assistive technology.</li></ul>
+<p>There are A, AA and AAA levels. AA includes A requirements and is a common target. This lesson introduces a few checks; it does not certify the whole site as compliant.</p>
+<h3>1. Describe useful images</h3>
+<pre tabindex="0"><code>&lt;img src=&quot;images/little-house.png&quot;
+     alt=&quot;A small blue house with a yellow door&quot;&gt;</code></pre>
+<p>Describe what matters in context. Use <code>alt=""</code> for a decoration that adds no information, like the browser icon repeated at the top of these pages. This relates to WCAG 1.1.1, Non-text Content.</p>
+<h3>2. Use headings and clear link names</h3>
+<pre tabindex="0"><code>&lt;h1&gt;Recipe notebook&lt;/h1&gt;
+&lt;h2&gt;Breakfast&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;toast.html&quot;&gt;Read the toast recipe&lt;/a&gt;&lt;/p&gt;</code></pre>
+<p>“Read the toast recipe” explains the destination better than “click here.” Do not skip heading levels just to get smaller text. Headings communicate relationships (1.3.1), and link text should explain its purpose in context (2.4.4).</p>
+<h3>3. Keep text readable</h3>
+<p>For WCAG AA, ordinary text needs at least <strong>4.5:1</strong> contrast against its background. Large text needs at least <strong>3:1</strong>. Large means at least 18 points, or 14 points when bold—roughly 24px, or 18.7px bold. These are contrast ratios, not font-size rules for all text.</p>
+<p>Use a contrast checker rather than guessing. Also try browser zoom at 200%. Text should remain available without being cut off. Keep links underlined so colour is not their only sign.</p>
+<h3>4. Try the keyboard</h3>
+<ol><li>Press Tab to move between links and controls.</li><li>Press Shift + Tab to move backwards.</li><li>Press Enter to follow a focused link.</li><li>Check that you can see which item has focus.</li></ol>
+<pre tabindex="0"><code>a:focus {
+    outline: 3px solid navy;
+}</code></pre>
+<p>Do not remove the focus outline. Keyboard access relates to 2.1.1; a visible focus indicator relates to 2.4.7. The “Skip to page content” link on this site lets a keyboard user pass the repeated menu (2.4.1).</p>
+<h3>5. Give an input a label</h3>
+<pre tabindex="0"><code>&lt;label for=&quot;visitor-name&quot;&gt;Your name&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;visitor-name&quot; name=&quot;visitor-name&quot;&gt;</code></pre>
+<div class="box"><p><label for="visitor-name">Your name</label><br><input type="text" id="visitor-name" name="visitor-name"></p><p>Practice only. This field does not send or save anything. Click the label to focus the field.</p></div>
+<p>The label's <code>for</code> value must match the input's <code>id</code>. A placeholder alone is not a replacement for a label. See 1.3.1 and 3.3.2.</p>
+<h3>6. Let people control media</h3>
+<p>Do not autoplay sound or add flashing effects. Video with meaningful audio needs checked captions (1.2.2). Important visual information may also need audio description at AA (1.2.5). A written description is useful, but it does not automatically meet all of those requirements.</p>
+<p>The sample commercial has no supplied captions. That remains a limitation of the media example. The video lesson and its exercise are also available as text.</p>
+<h3>Try it</h3><p>Use only Tab and Enter to visit a lesson. Zoom the page to 200%. Click the “Your name” label above.</p><p><strong>Check:</strong> You can see focus, reach the links, read the enlarged text and move focus into the matching input.</p>
+<h3>If it goes wrong</h3><p>A page can look readable and still have keyboard or screen-reader problems. A checklist or an automatic scan is only part of testing.</p>
+<p>References: <a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 Quick Reference</a> and <a href="https://www.w3.org/WAI/test-evaluate/preliminary/">W3C Easy Checks</a>.</p>
+<p>Next, use a built-in HTML control to open a short answer.</p>
+            <p><a href="video.html">&lt; Previous</a> | <a href="details.html">Next &gt;</a></p>
+            <p><a href="#lesson">Back to page heading</a></p>
+        </main>
+        <footer class="page-footer">
+            <hr>
+            <p class="small-print">Baby's First Web Class | VIS 412 | Zahra</p>
+            
+        </footer>
+    </div>
+    <div class="status-bar">Done. &nbsp; | &nbsp; Local pages. No sign-up needed.</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+BABY'S FIRST WEB CLASS - ARG VERSION
+
+Extract the whole folder, then open index.html in a current browser.
+No installation, local server, framework or script is needed.
+Keep the images and fonts folders beside the HTML files.
+External reference links need internet access; the local pages and video do not.
+
+Open HTML and style.css in a plain text editor to change them. Save and refresh.
+The old browser buttons are decoration. Use the actual links to navigate.
+
+Review reflection.html/reflection.txt and the assistance credit before submitting.
+Use teacher-checklist.txt to locate the rubric requirements.
+The video has NO captions supplied: its description is visual only.
+
+This version keeps Mac/Kay and the intentionally strange material.
+Home footer -> archive.html -> mailbox.html -> still-here.html -> run.html.
+There is also an old link in links.html. The normal menu leads back out.
+run.html and style copy.css are exact copies from your uploaded ZIP.
+Their original quirks and errors are intentionally preserved.
+The clean ZIP is the version to hand to your professor for grading.
+
+No .bak files or Mac .DS_Store files are included.

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lesson 1: Basic HTML - Baby's First Web Class</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="warning">READ ME: Student project with fictional characters and ARG material. Not a real learning service. <a href="#lesson">Skip to page content</a></p>
+<div class="ie-window">
+    <!-- The old browser frame is decoration. Use the links below it. -->
+    <div class="title-bar">
+        <span class="window-decor" aria-hidden="true">_ &nbsp; □ &nbsp; X</span>
+        <img class="ie-icon" src="images/internetexplorer6icon.png" alt="">
+        Baby's First Web Class - Microsoft Internet Explorer
+    </div>
+    <div class="menu-bar" aria-hidden="true">File Edit View Favorites Tools Help</div>
+    <div class="toolbar"><a href="index.html">Home</a> <a href="glossary.html">Find a tag</a> <a href="resources.html">Sources</a></div>
+    <div class="address-bar">Address: <span class="address">babys-first-web-class / html.html</span></div>
+    <div class="browser-content">
+        <header class="site-heading">
+            <h1>Baby's First Web Class</h1>
+            <p>~ a small place to learn the basics ~</p>
+            <span class="badge">HTML + CSS | Made by Mac Foster!</span>
+        </header>
+        <!-- Same directory on the lesson and reference pages. -->
+        <nav class="sidebar" aria-label="Main navigation">
+            <p><strong>Site directory</strong></p>
+                <a href="index.html">Home</a>
+                <a href="html.html" aria-current="page">1. Basic HTML &lt;-- you are here</a>
+                <a href="structure.html">2. Headings &amp; lists</a>
+                <a href="css.html">3. Basic CSS</a>
+                <a href="colours.html">4. Colours &amp; fonts</a>
+                <a href="links.html">5. Links &amp; images</a>
+                <a href="layout.html">6. Boxes &amp; layout</a>
+                <a href="video.html">7. Adding a video</a>
+                <a href="accessibility.html">8. Accessibility</a>
+                <a href="details.html">9. Click-open answers</a>
+                <a href="practice.html">10. Put it together</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="resources.html">Resources</a>
+                <a href="faq.html">FAQ</a>
+                <a href="reflection.html">Reflection</a>
+        </nav>
+        <main class="lesson" id="lesson" tabindex="-1">
+            <h2>Lesson 1: Basic HTML</h2>
+
+
+            <p class="note"><strong>Goal:</strong> Make a page with one main heading, a paragraph and a list.</p>
+            <p>HTML describes the content of a page. A tag gives the content a job. For example, <code>&lt;p&gt;</code> starts a paragraph and <code>&lt;/p&gt;</code> ends it.</p>
+            <h3>A very small page</h3>
+            <p>Type this into a new file named <code>index.html</code>. Save it, then open it in a browser.</p>
+            <pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My first page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;My little page&lt;/h1&gt;
+    &lt;p&gt;I am learning HTML.&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Save my file&lt;/li&gt;
+        &lt;li&gt;Open it in a browser&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <div class="box">
+                <h3>What you should see</h3>
+                <p class="demo-title"><strong>My little page</strong></p>
+                <p>I am learning HTML.</p>
+				<br>
+				<p>A̫̜͊͆͋̽̆ͅP̶̨̲̜̙̙P̴̶̹͙͉̗̥̗͖ͩ̂L͈̪̗̱͛͂̎ͧ̎ͥ̒ͦḚ I̵͕͎̦͇̟̙̠͔̎ͤS̞͔ͤ̆̐ͬ Ã̶̴̮̺̮͈̩͇̦̥̒́ͮͤL̳̰̗̼͔̏̊̐ͣW̶̰̓ͭ̋ͫ̄Ą̥̞̠̰̱̫̿̊̔̉ͬY̘̣̹͚ͨ̃̔ͭͧ͒S̝̺͍̘̥̺̯͙̎ W̴̸͈̯ͥ̃ͦA̶̬̪̘͖͔͂ͫ̂̌ͣT̩̲̩̖͓̙̱ͧ͂ͅC̶̨̥̤͍̟̋̊̐̽͌̉H̵̴̜̤͇̠̃͂͊I̵̧̟ͅN͓͖̟̥Ģ̵͎̥͖̟̰͓͗̅ͤ̉̏̀ͤ</p>
+                <ul><li>Save my file</li><li>Open it in a browser</li></ul>
+            </div>
+            <h3>What do those parts do?</h3>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code> tells the browser to use modern HTML.</li>
+                <li><code>&lt;head&gt;</code> holds page information. The title appears in the browser tab.</li>
+                <li><code>&lt;body&gt;</code> holds the visible page.</li>
+                <li><code>&lt;h1&gt;</code> is the main heading. Use <code>&lt;h2&gt;</code> for sections under it.</li>
+                <li><code>&lt;ul&gt;</code> is a bulleted list. Each item goes in <code>&lt;li&gt;</code>.</li>
+            </ul>
+            <h3>Give parts of the page a job</h3>
+            <p><code>&lt;header&gt;</code> holds introductory content, <code>&lt;nav&gt;</code> holds navigation, <code>&lt;main&gt;</code> holds the main content, and <code>&lt;footer&gt;</code> holds closing information. These names explain the structure.</p>
+            <h3>Common mistake</h3>
+            <p>Do not close a paragraph with the opening tag again.</p>
+            <pre tabindex="0"><code>Wrong: &lt;p&gt;Hello.&lt;p&gt;
+Right: &lt;p&gt;Hello.&lt;/p&gt;</code></pre>
+            <h3>Try it</h3>
+            <p>Change the heading to your name and add a third list item. Save and refresh. The new heading and item should appear.</p>
+            <p>Next, organise a page with headings and lists.</p>
+        
+<!-- .... . .-.. .--. -->
+            <p><a href="index.html">&lt; Previous</a> | <a href="structure.html">Next &gt;</a></p>
+            <p><a href="#lesson">Back to page heading</a></p>
+        </main>
+        <footer class="page-footer">
+            <hr>
+            <p class="small-print">Baby's First Web Class | VIS 412 | They're watching us.</p>
+            
+        </footer>
+    </div>
+    <div class="status-bar">Done. &nbsp; | &nbsp;  Don't take my site down, please.</div>
+</div>
+</body>
+</html>

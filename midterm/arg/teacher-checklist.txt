@@ -1,0 +1,53 @@
+MIDTERM - WHERE TO FIND THINGS
+
+10 lessons, plus home, glossary, resources, FAQ, reflection and video description.
+The main menu is repeated in plain HTML, with previous/next lesson links.
+
+CHECKLIST
+1. Semantic structure: header, nav, main and footer on normal pages.
+2. Heading/paragraph hierarchy: every lesson.
+3. Ordered and unordered lists: structure.html and the home lesson list.
+4. Anchors: shared navigation.
+5. Page jump links and IDs: skip link on each normal page, glossary sections.
+6. External links: resources.html and accessibility.html.
+7. Images with alt: links.html and accessibility.html.
+8. Reused classes: box, note, sidebar and demo-box.
+9. Structural IDs: lesson, terms, quick-copy and image-example.
+10. Margin and padding: css.html and layout.html.
+11. Float, clear and clearfix: layout.html, with live example and CSS.
+12. Container centring with margin auto: ie-window and layout.html example.
+13. Background styling: desktop, frame, page and note boxes.
+14. RGBA colour: note background; explained in colours.html.
+15. HTML and CSS comments: frame, navigation, floats and caption example.
+16. Small PNG and image format explanation: links.html (333-byte house).
+Flex/Grid is not used; it is one option, not a requirement to use every item.
+No claim is made that Photoshop/Figma were used.
+
+EXTRA RESEARCHED TECHNIQUE
+Native details/summary control: details.html (lesson 9), with MDN reference.
+Confirm this was not covered in your class.
+
+OPTIONAL ENHANCEMENTS
+Common mistake sections; glossary; reusable example/note classes.
+
+DESIGN SYSTEM
+Body: 18px; main heading: 32px; section: 25px; subheading: 20px.
+Blue/grey frame and pale cream/lavender backgrounds.
+Repeated 12px example padding and 16px example margins.
+One small-screen media query changes the float sidebar to a full-width menu.
+
+REFLECTION
+reflection.html and reflection.txt answer all four questions. Personalise before submission.
+
+MEDIA LIMITATION
+The supplied commercial has no captions or verified audio transcript.
+video-notes.html describes the pictures only. This does NOT establish
+full WCAG conformance. The embedding lesson is also entirely written out.
+The source/rights of the supplied font and some assets need checking
+before public distribution.
+
+ARG EXCEPTION
+run.html and style copy.css are deliberately unchanged at the user's request.
+The bonus horror page still has its original menu, inline style, empty title,
+heading jump and stylesheet typo. It is not the grading version.
+All regular teaching pages use the shared style.css.

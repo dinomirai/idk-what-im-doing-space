@@ -1,0 +1,222 @@
+/* One shared stylesheet. Plain colours, borders, margins and padding. */
+@font-face {
+	font-family: "Old Windows";
+	src: url("fonts/ms-sans-serif-1.otf.woff2") format("woff2");
+}
+body {
+	background-color: #3b6ea5;
+	color: #000000;
+	font-family: "Times New Roman", serif;
+	font-size: 18px;
+	line-height: 1.5;
+	margin: 16px;
+}
+.warning {
+	background-color: #fff7bf;
+	border: 1px solid #000000;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	padding: 4px 8px;
+	margin: 0 auto 12px auto;
+	max-width: 920px;
+}
+/* Light top/left borders and dark bottom/right borders make a raised frame. */
+.ie-window {
+	background-color: #d4d0c8;
+	border-top: 3px solid #ffffff;
+	border-left: 3px solid #ffffff;
+	border-right: 3px solid #555555;
+	border-bottom: 3px solid #555555;
+	max-width: 940px;
+	margin: 0 auto;
+}
+.title-bar {
+	background-color: #000080;
+	color: #ffffff;
+	font-family: "Old Windows", Tahoma, Arial, sans-serif;
+	font-size: 16px;
+	padding: 4px 6px;
+}
+.ie-icon {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.window-decor {
+	float: right;
+	color: #000000;
+	background-color: #d4d0c8;
+	border: 1px outset #ffffff;
+	padding: 0 5px;
+}
+.menu-bar, .toolbar, .address-bar, .status-bar {
+	font-family: "Old Windows", Tahoma, Arial, sans-serif;
+	font-size: 14px;
+	padding: 5px 8px;
+	border-bottom: 1px solid #808080;
+}
+.menu-bar {
+	word-spacing: 12px;
+}
+.toolbar a {
+	margin-right: 14px;
+}
+.address {
+	background-color: #ffffff;
+	border: 2px inset #eeeeee;
+	padding: 2px 8px;
+	overflow-wrap: break-word;
+}
+/* The browser frame is decoration. The real links work normally. */
+.browser-content {
+	background-color: #fffde9;
+	border: 2px inset #eeeeee;
+	margin: 5px;
+	padding: 16px;
+}
+.site-heading {
+	text-align: center;
+	color: #000080;
+	border-bottom: 3px double #000080;
+	padding-bottom: 12px;
+	margin-bottom: 18px;
+}
+.site-heading p {
+	margin: 4px 0;
+}
+h1 {
+	font-size: 32px;
+	line-height: 1.2;
+	margin: 8px 0;
+}
+h2 {
+	font-size: 25px;
+	line-height: 1.3;
+	margin-top: 24px;
+}
+h3 {
+	font-size: 20px;
+	margin-top: 20px;
+}
+p {
+	margin: 12px 0;
+}
+a {
+	color: #0000bb;
+}
+a:visited {
+	color: #551a8b;
+}
+a:hover {
+	text-decoration: none;
+}
+a:focus {
+	outline: 3px solid #000080;
+}
+/* Float sidebar. */
+.sidebar {
+	float: left;
+	width: 23%;
+	background-color: #e6e6fa;
+	border: 1px solid #000080;
+	padding: 8px;
+	box-sizing: border-box;
+}
+.sidebar p {
+	margin: 4px 0 10px 0;
+}
+.sidebar a {
+	display: block;
+	margin: 8px 0;
+}
+.lesson {
+	margin-left: 27%;
+}
+.page-footer {
+	clear: both;
+	padding-top: 24px;
+}
+.box {
+	background-color: #ffffff;
+	border: 1px solid #808080;
+	padding: 12px;
+	margin: 16px 0;
+}
+.note {
+	background-color: rgba(255, 221, 102, 0.25);
+	border: 1px dashed #666666;
+	padding: 10px;
+}
+pre {
+	background-color: #eeeeee;
+	border: 1px solid #808080;
+	padding: 10px;
+	overflow: auto;
+	font-size: 16px;
+}
+code {
+	font-family: "Courier New", monospace;
+}
+.demo-title {
+	color: #000080;
+	font-size: 24px;
+}
+.demo-box {
+	border: 2px solid #000080;
+	padding: 12px;
+	margin: 12px;
+}
+.sample-image {
+	width: 96px;
+	height: 64px;
+}
+.badge {
+	display: inline-block;
+	background-color: #d4d0c8;
+	border: 2px outset #eeeeee;
+	padding: 2px 8px;
+	font-family: "Courier New", monospace;
+	font-size: 14px;
+}
+details {
+	background-color: #ffffff;
+	border: 1px solid #808080;
+	padding: 10px;
+	margin: 12px 0;
+}
+summary {
+	cursor: pointer;
+	font-weight: bold;
+}
+.small-print {
+	font-size: 15px;
+}
+/* Small screen. */
+@media (max-width: 600px) {
+	body {
+		margin: 6px;
+	}
+	.sidebar {
+		float: none;
+		width: auto;
+	}
+	.lesson {
+		margin-left: 0;
+	}
+	.window-decor {
+		display: none;
+	}
+}
+
+/* Examples used in the added lessons. */
+.colour-sample { color: #000080; background-color: #fffde9; }
+.float-house { float: left; width: 96px; height: auto; margin-right: 12px; }
+.after-float { clear: both; }
+/* The empty block keeps the floated image inside its parent. */
+.float-example::after { content: ""; display: block; clear: both; }
+video { max-width: 100%; height: auto; }
+input { max-width: 100%; box-sizing: border-box; font: inherit; }
+input:focus, summary:focus, pre:focus { outline: 3px solid #000080; }
+.lesson { overflow-wrap: break-word; }
+.story-image { max-width: 100%; height: auto; }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lesson 4: Colours and fonts - Baby's First Web Class</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="warning">Student project for VIS 412. This is not an official learning site. <a href="#lesson">Skip to page content</a></p>
+<div class="ie-window">
+    <!-- The old browser frame is decoration. Use the links below it. -->
+    <div class="title-bar">
+        <span class="window-decor" aria-hidden="true">_ &nbsp; □ &nbsp; X</span>
+        <img class="ie-icon" src="images/internetexplorer6icon.png" alt="">
+        Baby's First Web Class - Microsoft Internet Explorer
+    </div>
+    <div class="menu-bar" aria-hidden="true">File Edit View Favorites Tools Help</div>
+    <div class="toolbar"><a href="index.html">Home</a> <a href="glossary.html">Find a tag</a> <a href="resources.html">Sources</a></div>
+    <div class="address-bar">Address: <span class="address">babys-first-web-class / colours.html</span></div>
+    <div class="browser-content">
+        <header class="site-heading">
+            <h1>Baby's First Web Class</h1>
+            <p>~ a small place to learn the basics ~</p>
+            <span class="badge">HTML + CSS | Made by Zahra</span>
+        </header>
+        <!-- Same directory on the lesson and reference pages. -->
+        <nav class="sidebar" aria-label="Main navigation">
+            <p><strong>Site directory</strong></p>
+                <a href="index.html">Home</a>
+                <a href="html.html">1. Basic HTML</a>
+                <a href="structure.html">2. Headings &amp; lists</a>
+                <a href="css.html">3. Basic CSS</a>
+                <a href="colours.html" aria-current="page">4. Colours &amp; fonts &lt;-- you are here</a>
+                <a href="links.html">5. Links &amp; images</a>
+                <a href="layout.html">6. Boxes &amp; layout</a>
+                <a href="video.html">7. Adding a video</a>
+                <a href="accessibility.html">8. Accessibility</a>
+                <a href="details.html">9. Click-open answers</a>
+                <a href="practice.html">10. Put it together</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="resources.html">Resources</a>
+                <a href="faq.html">FAQ</a>
+                <a href="reflection.html">Reflection</a>
+        </nav>
+        <main class="lesson" id="lesson" tabindex="-1">
+            <h2>Lesson 4: Colours and fonts</h2>
+<p class="note"><strong>Goal:</strong> Choose a readable colour pair and a font with a fallback.</p>
+<p>You only need a few colours. This site uses a blue desktop, a grey frame and pale lesson pages. Plain dark text is easier to read than a busy pattern behind every paragraph.</p>
+<h3>Change text and background</h3>
+<pre tabindex="0"><code>body {
+    background-color: #fffde9;
+    color: #000000;
+}
+h1 {
+    color: #000080;
+}</code></pre>
+<p>The six characters after <code>#</code> describe a colour. <code>#000000</code> is black and <code>#ffffff</code> is white. You can also start with names such as <code>navy</code>.</p>
+<h3>Pick a readable font</h3>
+<pre tabindex="0"><code>body {
+    font-family: &quot;Times New Roman&quot;, serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 25px;
+}</code></pre>
+<p>The browser tries the first font, then the next one. <code>serif</code> is a general fallback. <code>line-height: 1.5</code> leaves space between lines.</p>
+<div class="box"><p class="colour-sample">Dark blue text on a pale background.</p><p>Normal body text stays at 18 pixels.</p></div>
+<h3>A little transparent colour</h3>
+<p>This is the rule for the pale note boxes:</p>
+<pre tabindex="0"><code>.note {
+    background-color: rgba(255, 221, 102, 0.25);
+}</code></pre>
+<p>The first three numbers are red, green and blue. The last number is opacity: <code>0</code> is transparent and <code>1</code> is solid. Here the yellow is only partly visible.</p>
+<h3>Keep a small set of choices</h3>
+<p>Use the same heading sizes, link colour and box spacing on every page. That is the design system: a few choices used again instead of a new look on each page.</p>
+<h3>Try it</h3><p>Change a practice heading to navy and keep the paragraph black. Add a fallback font.</p><p><strong>Check:</strong> The heading changes, the paragraph stays readable, and both still appear if the first font is unavailable.</p>
+<h3>If it goes wrong</h3><p>Light yellow text on a white background is hard to read. A colour that looks nice is not always readable. The accessibility lesson explains contrast ratios.</p>
+<p>Next, connect pages and add an image.</p>
+            <p><a href="css.html">&lt; Previous</a> | <a href="links.html">Next &gt;</a></p>
+            <p><a href="#lesson">Back to page heading</a></p>
+        </main>
+        <footer class="page-footer">
+            <hr>
+            <p class="small-print">Baby's First Web Class | VIS 412 | Zahra</p>
+            
+        </footer>
+    </div>
+    <div class="status-bar">Done. &nbsp; | &nbsp; Local pages. No sign-up needed.</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lesson 6: Boxes and layout - Baby's First Web Class</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="warning">READ ME: Student project with fictional characters and ARG material. Not a real learning service. <a href="#lesson">Skip to page content</a></p>
+<div class="ie-window">
+    <!-- The old browser frame is decoration. Use the links below it. -->
+    <div class="title-bar">
+        <span class="window-decor" aria-hidden="true">_ &nbsp; □ &nbsp; X</span>
+        <img class="ie-icon" src="images/internetexplorer6icon.png" alt="">
+        Baby's First Web Class - Microsoft Internet Explorer
+    </div>
+    <div class="menu-bar" aria-hidden="true">File Edit View Favorites Tools Help</div>
+    <div class="toolbar"><a href="index.html">Home</a> <a href="glossary.html">Find a tag</a> <a href="resources.html">Sources</a></div>
+    <div class="address-bar">Address: <span class="address">babys-first-web-class / layout.html</span></div>
+    <div class="browser-content">
+        <header class="site-heading">
+            <h1>Baby's First Web Class</h1>
+            <p>~ a small place to learn the basics ~</p>
+            <span class="badge">HTML + CSS | Made by Mac Foster!</span>
+        </header>
+        <!-- Same directory on the lesson and reference pages. -->
+        <nav class="sidebar" aria-label="Main navigation">
+            <p><strong>Site directory</strong></p>
+                <a href="index.html">Home</a>
+                <a href="html.html">1. Basic HTML</a>
+                <a href="structure.html">2. Headings &amp; lists</a>
+                <a href="css.html">3. Basic CSS</a>
+                <a href="colours.html">4. Colours &amp; fonts</a>
+                <a href="links.html">5. Links &amp; images</a>
+                <a href="layout.html" aria-current="page">6. Boxes &amp; layout &lt;-- you are here</a>
+                <a href="video.html">7. Adding a video</a>
+                <a href="accessibility.html">8. Accessibility</a>
+                <a href="details.html">9. Click-open answers</a>
+                <a href="practice.html">10. Put it together</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="resources.html">Resources</a>
+                <a href="faq.html">FAQ</a>
+                <a href="reflection.html">Reflection</a>
+        </nav>
+        <main class="lesson" id="lesson" tabindex="-1">
+            <h2>Lesson 6: Boxes and layout</h2>
+<p class="note"><strong>Goal:</strong> Use margin, padding, a float, clear and a clearfix to arrange a small page.</p>
+<p>Every element takes up a box. Its content is inside, then padding, then a border. Margin leaves room outside that border.</p>
+<pre tabindex="0"><code>.demo-box {
+    padding: 12px;
+    border: 2px solid navy;
+    margin: 12px;
+}</code></pre>
+<div class="box"><p class="demo-box">Padding is between these words and the border. Margin is outside the border.</p></div>
+<h3>Centre a container</h3>
+<pre tabindex="0"><code>.page {
+    max-width: 900px;
+    margin: 0 auto;
+}</code></pre>
+<p><code>max-width</code> puts a limit on the width. The two <code>auto</code> side margins share the extra space. That centres the container when the window is wider than it.</p>
+<h3>A small float example</h3>
+<p>A float can put a picture on the left while text wraps beside it. The example uses the house image from lesson 5.</p>
+<pre tabindex="0"><code>&lt;div class=&quot;float-example&quot;&gt;
+    &lt;img class=&quot;float-house&quot; src=&quot;images/little-house.png&quot;
+         alt=&quot;A small blue house with a yellow door&quot;&gt;
+    &lt;p&gt;This text wraps beside the picture.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p class=&quot;after-float&quot;&gt;This starts below the picture.&lt;/p&gt;</code></pre>
+<pre tabindex="0"><code>.float-house {
+    float: left;
+    width: 96px;
+    margin-right: 12px;
+}
+.after-float {
+    clear: both;
+}</code></pre>
+<div class="box"><div class="float-example"><img class="float-house" src="images/little-house.png" width="96" height="64" alt="A small blue house with a yellow door"><p>This text wraps beside the picture.</p></div><p class="after-float">This starts below the picture.</p></div>
+<h3>Keep a float inside its parent: clearfix</h3>
+<p>A floated child can stick out of a short parent. A clearfix adds an empty piece after the children and clears the float. This keeps the parent's border around the picture too.</p>
+<pre tabindex="0"><code>.float-example::after {
+    content: &quot;&quot;;
+    display: block;
+    clear: both;
+}</code></pre>
+<p><code>::after</code> means “add something after this element's content.” The empty quotes mean no visible words are added. The footer on this site also uses <code>clear: both</code> to sit below the sidebar.</p>
+<h3>Try it</h3><p>Copy the float example. Make its paragraph one short sentence, then remove and restore the clearfix rule.</p><p><strong>Check:</strong> With the clearfix, the parent remains tall enough for the picture. The paragraph with clear starts below it.</p>
+<h3>If it goes wrong</h3><p>Floats do not need to control every part of a page. One small example is enough to see the difference between wrapping text, clearing it and containing it.</p>
+<p>Next, add a video using the browser's own player.</p>
+            <p><a href="links.html">&lt; Previous</a> | <a href="video.html">Next &gt;</a></p>
+            <p><a href="#lesson">Back to page heading</a></p>
+        </main>
+        <footer class="page-footer">
+            <hr>
+            <p class="small-print">Baby's First Web Class | VIS 412 | Z.R.</p>
+            
+        </footer>
+    </div>
+    <div class="status-bar">Done. &nbsp; | &nbsp; Local pages. No sign-up needed.</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+Reflection draft by Zahra. Read it through and change anything that does not match your own decisions before submitting.
+
+
+Who is the intended learner?
+This site is for someone who is new to HTML and CSS, or who has used them but forgets the tags. I know what that is like, so I wanted the examples to stay visible. The learner needs to know how to make a folder, save a text file and open it in a browser.
+
+
+Why this format?
+I mainly used short text lessons with code and a visible example. A learner can copy one small part, save it and check what changed. I added a local video as an example of embedding media. The lesson itself is written out, so the video is optional. The supplied clip does not have captions, which is a limitation I would need to fix for accessible publication.
+
+
+How does navigation help?
+The same menu is on the lesson pages. The numbered lessons go from a first HTML page to CSS, links, layout, media and accessibility. Previous and next links give a route through them. The glossary is for finding something quickly, and the skip link avoids going through the whole menu each time.
+
+
+What design choices help?
+I wanted it to look like an old personal website inside an Internet Explorer window. I kept the blue, grey and pale background, but used readable text sizes and ordinary underlined links. The heading sizes and example boxes repeat. I kept the code simple so I can open a file and see what each part does.
