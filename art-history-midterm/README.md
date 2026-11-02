@@ -6,6 +6,14 @@
 
 > This is a student-facing original study aid based on the supplied syllabus/artwork list, the accompanying formal-analysis vocabulary sheet, and the *Gardner's Art Through the Ages: The Western Perspective*, volume II textbook. The PDF is a **Western Perspective** edition with different chapter numbering from the course's Global History references; global-unit notes below are brief supplements, not an assertion that they came from the uploaded Western textbook. The professor's list contains possible date/title errors; follow instructor requirements where they conflict, and verify the exact slide captions.
 
+## Open the study materials
+
+- **[Interactive artwork quiz](quiz.html)** — download the HTML file and open it in a browser to use the controls; GitHub file preview shows HTML source rather than running it.
+- **[Printable two-sided 3×5 index card](index-card.html)** — download and open in a browser, then Print → Save as PDF at actual size; or copy by hand.
+- **[Complete written study guide](README.md)** — everything below is readable directly on GitHub, without attachments.
+
+**Access note:** The generated PDF binaries from the earlier chat have not been uploaded here. Their full core study content is instead available as readable text and printable/browser HTML. The original textbook is not redistributed.
+
 ## First — the emergency plan
 
 You don't have to learn every historical fact separately. Many essays use the same pattern: **identify → describe two concrete formal choices → explain a related historical context → explain what the choices accomplish.** Aphantasia does not prevent you from learning visual art by word-based cues.
