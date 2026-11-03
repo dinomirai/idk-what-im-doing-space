@@ -6,6 +6,10 @@
 
 > This is a student-facing original study aid based on the supplied syllabus/artwork list, the accompanying formal-analysis vocabulary sheet, and the *Gardner's Art Through the Ages: The Western Perspective*, volume II textbook. The PDF is a **Western Perspective** edition with different chapter numbering from the course's Global History references; global-unit notes below are brief supplements, not an assertion that they came from the uploaded Western textbook. The professor's list contains possible date/title errors; follow instructor requirements where they conflict, and verify the exact slide captions.
 
+## Expanded context-heavy cheat sheet (new)
+
+**[Read the expanded movement, vocabulary, patronage, named works and essay cheat sheet](CONTEXT-CHEAT-SHEET.md)** — includes two dense index-card sides, key chronology, Reformation/Counter-Reformation, global units, artist progressions, major works and ready-to-adapt paragraph examples. **Prioritize this if the exam has no artwork images.**
+
 ## Open the study materials
 
 - **[Open runnable interactive artwork quiz](https://raw.githack.com/dinomirai/idk-what-im-doing-space/main/art-history-midterm/quiz.html)** (third-party HTML preview) or [download HTML](quiz.html); GitHub's normal source view does not execute it. Artwork previews are searched live from Wikimedia Commons when online; no match is guaranteed, and you should cross-check uncertain results against course slides.
