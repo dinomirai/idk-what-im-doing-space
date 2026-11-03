@@ -8,7 +8,7 @@
 
 ## Open the study materials
 
-- **[Interactive artwork quiz](quiz.html)** — download the HTML file and open it in a browser to use the controls; GitHub file preview shows HTML source rather than running it.
+- **[Interactive artwork quiz with images](quiz.html)** — download the HTML file and open it in a browser to use the controls; GitHub file preview shows HTML source rather than running it. Artwork previews are searched live from Wikimedia Commons when online; no match is guaranteed, and you should cross-check uncertain results against course slides.
 - **[Printable two-sided 3×5 index card](index-card.html)** — download and open in a browser, then Print → Save as PDF at actual size; or copy by hand.
 - **[Complete written study guide](README.md)** — everything below is readable directly on GitHub, without attachments.
 
