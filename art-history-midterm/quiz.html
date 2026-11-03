@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ART 202 W • Study quiz</title><style>:root{color-scheme:dark}body{font:17px/1.5 system-ui,Arial;background:#111827;color:#f8fafc;max-width:760px;margin:32px auto;padding:0 16px}header{margin-bottom:24px}.muted{color:#94a3b8}button,select{font:inherit;border:1px solid #64748b;border-radius:9px;background:#273449;color:white;padding:10px 13px;cursor:pointer;margin:4px}button:focus-visible,select:focus-visible{outline:3px solid #fbbf24}main{background:#1e293b;border:1px solid #475569;border-radius:16px;padding:24px;min-height:180px}h1{font-size:1.8rem}h2{font-size:1.3rem}#a{border-top:1px solid #64748b;margin-top:20px;padding-top:15px;white-space:pre-line}#a[hidden]{display:none}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.foot{font-size:.85em;color:#94a3b8;margin-top:25px}a{color:#93c5fd}</style><header><h1>ART 202 W — recall quiz</h1><p class="muted">Designed for verbal memory rather than mental imagery. Read a description, say the work and its context, then reveal. No account or internet required after downloading.</p></header><div class="controls"><label>Unit <select id="unit"><option value="All">All units</option></select></label><button id="shuffle">Shuffle</button><button id="prev">Previous</button><button id="next">Next</button></div><p id="counter" aria-live="polite"></p><main><h2 id="q"></h2><button id="reveal">Reveal answer</button><div id="a" hidden></div></main><p class="foot">Course-specific cues based on the supplied artwork list. Some dates/titles in the professor's sheet appear inconsistent; use class slides for exact required identification. <a href="README.md">Full written study guide</a> · <a href="index-card.html">Printable index card</a></p><script>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ART 202 W • Study quiz</title><style>:root{color-scheme:dark}body{font:17px/1.5 system-ui,Arial;background:#111827;color:#f8fafc;max-width:760px;margin:32px auto;padding:0 16px}header{margin-bottom:24px}.muted{color:#94a3b8}button,select{font:inherit;border:1px solid #64748b;border-radius:9px;background:#273449;color:white;padding:10px 13px;cursor:pointer;margin:4px}button:focus-visible,select:focus-visible{outline:3px solid #fbbf24}main{background:#1e293b;border:1px solid #475569;border-radius:16px;padding:24px;min-height:180px}h1{font-size:1.8rem}h2{font-size:1.3rem}#a{border-top:1px solid #64748b;margin-top:20px;padding-top:15px;white-space:pre-line}#a[hidden]{display:none}figure{margin:12px 0 18px;min-height:160px;background:#0f172a;border-radius:12px;border:1px solid #475569;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden}figure img{display:block;max-width:100%;max-height:390px;object-fit:contain;background:#0f172a}figcaption{color:#cbd5e1;font-size:.83rem;padding:8px 12px;text-align:center}#source[hidden]{display:none}#source{margin:10px 0;font-size:.9rem}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.foot{font-size:.85em;color:#94a3b8;margin-top:25px}a{color:#93c5fd}</style><header><h1>ART 202 W — recall quiz</h1><p class="muted">Designed for verbal memory rather than mental imagery. Read a description, say the work and its context, then reveal. The questions work offline after downloading; artwork images load from Wikimedia Commons when internet is available. Not every image is confirmed to match your instructor's slide.</p></header><div class="controls"><label>Unit <select id="unit"><option value="All">All units</option></select></label><button id="shuffle">Shuffle</button><button id="prev">Previous</button><button id="next">Next</button></div><p id="counter" aria-live="polite"></p><main><figure><img id="art" alt="Reference artwork preview from Wikimedia Commons, if available" hidden><figcaption id="imageStatus" aria-live="polite">Loading image…</figcaption></figure><p id="source" hidden></p><h2 id="q"></h2><button id="reveal">Reveal answer</button><div id="a" hidden></div></main><p class="foot">Images are live Wikimedia Commons search previews: some works lack images or may return a different version. Always compare with the instructor’s artwork slide. Course-specific cues based on the supplied artwork list. Some dates/titles in the professor's sheet appear inconsistent; use class slides for exact required identification. <a href="README.md">Full written study guide</a> · <a href="index-card.html">Printable index card</a></p><script>
 const D=[
 ["Italy 1300","A grieving crowd and angels gather around Christ as a stone ledge slopes toward him.","Giotto, The Lamentation (c.1305)","Diagonals and heavy figures focus grief; Arena Chapel Christian narrative."],
 ["Italy 1300","Gold-background enthroned Mary with rows of saints and angels; monumental Siena commission.","Duccio, Maestà / Virgin and Child Enthroned (1308–11)","Hieratic devotional focus and softly modeled faces; Marian patronage."],
@@ -66,6 +66,67 @@ let pool=D.map((_,i)=>i),pos=0;
 const u=document.getElementById('unit'),q=document.getElementById('q'),a=document.getElementById('a'),c=document.getElementById('counter');
 for(const x of [...new Set(D.map(x=>x[0]))]){const e=document.createElement('option');e.value=x;e.textContent=x;u.appendChild(e)}
 function refresh(){const v=u.value;pool=D.map((x,i)=>v==='All'||x[0]===v?i:-1).filter(i=>i>=0);pos=0;show()}
-function show(){if(!pool.length)return;q.textContent=D[pool[pos]][1];a.textContent=D[pool[pos]][2]+'\n\nWhy it matters: '+D[pool[pos]][3];a.hidden=true;c.textContent='Question '+(pos+1)+' / '+pool.length+' · '+D[pool[pos]][0]}
+const pic=document.getElementById('art'),imageStatus=document.getElementById('imageStatus'),source=document.getElementById('source');
+const aliases={
+0:'Giotto Lamentation Scrovegni',1:'Duccio Maesta Siena',2:'Nicola Pisano pulpit Pisa Baptistery',
+3:'Cimabue Madonna Enthroned',4:'Ambrogio Lorenzetti Good Government City',5:'Giotto Scrovegni chapel interior',
+6:'Saint Clare altarpiece 1280',7:'Santa Croce Florence church interior',8:'Duccio Maesta Passion',
+9:'Limbourg January Tres Riches Heures',10:'Robert Campin Merode Triptych',11:'Jan van Eyck Ghent Altarpiece',
+12:'Jan van Eyck Arnolfini Portrait',13:'Martin Schongauer Temptation Saint Anthony',
+14:'Brunelleschi Florence Cathedral dome',15:'Ghiberti Jacob and Esau Gates Paradise',
+16:'Donatello David bronze statue',17:'Masaccio Tribute Money',18:'Botticelli Birth of Venus',
+19:'Huang Gongwang Fuchun Mountains',20:'David Vases porcelain 1351',
+21:'Leonardo Last Supper Milan',22:'Raphael School of Athens Vatican',23:'Michelangelo David marble',
+24:'Michelangelo Sistine Chapel ceiling',25:'Pontormo Alessandro de Medici portrait',
+26:'Giambologna Rape Sabine Women sculpture',27:'Titian Venus of Urbino',28:'Veronese Feast House Levi',
+29:'Albrecht Durer Adam Eve engraving',30:'Albrecht Durer Four Apostles',
+31:'Hans Holbein Ambassadors 1533',32:'Pieter Aertsen Meat Stall',33:'Bruegel Hunters in Snow',
+34:'Hieronymus Bosch Garden Earthly Delights',35:'Templo Mayor Tenochtitlan reconstruction',
+36:'Machu Picchu Peru',37:'Maria Martinez black-on-black feather avanyu pottery',
+38:'Kwakwakawakw eagle transformation mask',39:'Mandan buffalo hide robe',40:'Kiowa ledger drawing painted tipi',
+41:'Caravaggio Calling Saint Matthew',42:'Artemisia Gentileschi Judith Maidservant Holofernes head',
+43:'Giovanni Gaulli Triumph Name Jesus ceiling',44:'Bernini David marble',
+45:'Juan Sanchez Cotan game fowl still life',46:'Velazquez portrait Juan de Pareja',
+47:'Velazquez Las Meninas',48:'Jan Davidsz de Heem still life exotic birds',
+49:'Judith Leyster Self Portrait',50:'Rembrandt Self Portrait 1658',
+51:'Vermeer Woman Holding Balance',52:'Willem van Mieris African woman feather turban',
+53:'Jacob van Ruisdael View Haarlem bleaching grounds',54:'Nicolas Poussin Landscape Saint John Patmos',
+55:'Claude Lorrain Pastoral Landscape 1648',56:'Hyacinthe Rigaud Louis XIV 1701',
+57:'Versailles palace gardens',58:'Bichitr Jahangir Preferring Sufi Shaykh to Kings',
+59:'Taj Mahal Agra',60:'Madurai Meenakshi Temple gopuram'
+};
+const imageCache=new Map();let displayedToken=0;
+function makeCommonsSearch(term){return 'https://commons.wikimedia.org/w/index.php?search='+encodeURIComponent(term)+'&title=Special:MediaSearch&type=image'}
+function wordTokens(s){return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ').split(/\\s+/).filter(w=>w.length>3&&!['with','from','the','c','portrait','painting','statue','temple','saint','sculpture'].includes(w))}
+function scoreCandidate(title,words){const t=title.toLowerCase().replace(/^file:/,'').replace(/[_\\-]/g,' ');const match=words.filter(w=>t.includes(w)).length;const penalty=/study|sketch|after |reproduction|replica|copy|detail of|engraving after|drawing after|poster|postcard|book cover|watermark|collage|montage/i.test(t)?2:0;return match*2-penalty}
+async function findArtImage(idx){
+if(imageCache.has(idx))return imageCache.get(idx);
+const term=aliases[idx]||D[idx][2].replace(/\\(.*?\\)/g,'');
+const api=new URL('https://commons.wikimedia.org/w/api.php');Object.entries({
+action:'query',generator:'search',gsrsearch:term,gsrnamespace:'6',gsrlimit:'12',
+prop:'imageinfo',iiprop:'url|mime',iiurlwidth:'900',format:'json',formatversion:'2',origin:'*'
+}).forEach(([k,v])=>api.searchParams.set(k,v));
+const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
+try{
+const res=await fetch(api,{signal:controller.signal});if(!res.ok)throw new Error('HTTP '+res.status);
+const json=await res.json();const pages=(json.query?.pages||[]).filter(p=>p.imageinfo?.[0]&&/^image\\//.test(p.imageinfo[0].mime||''));
+const words=wordTokens(term);
+const sorted=pages.map(p=>({...p,matchScore:scoreCandidate(p.title,words)})).sort((a,b)=>b.matchScore-a.matchScore);
+const best=sorted[0];
+const result=best&&best.matchScore>=Math.max(4,Math.floor(words.length/2)*2)?
+{img:best.imageinfo[0].thumburl||best.imageinfo[0].url,url:best.imageinfo[0].descriptionurl||'https://commons.wikimedia.org/wiki/'+encodeURIComponent(best.title.replace(/ /g,'_')),title:best.title,confidence:best.matchScore}:null;
+imageCache.set(idx,result);return result;
+}catch(e){return null}finally{clearTimeout(timeout)}
+}
+async function loadImage(idx,token){
+const match=await findArtImage(idx);
+if(token!==displayedToken)return;
+if(!match){imageStatus.textContent='No sufficiently matched preview found. Use the Commons image search link below.';source.hidden=false;source.replaceChildren();const link=document.createElement('a');link.href=makeCommonsSearch(aliases[idx]||D[idx][2]);link.target='_blank';link.rel='noopener noreferrer';link.textContent='Find this artwork on Wikimedia Commons';source.appendChild(link);return;}
+pic.onload=()=>{if(token!==displayedToken)return;pic.hidden=false;imageStatus.textContent='Suggested Wikimedia Commons artwork preview; confirm against course slides.'};
+pic.onerror=()=>{if(token!==displayedToken)return;pic.hidden=true;imageStatus.textContent='Image preview unavailable. Open the source or search link below.'};
+pic.src=match.img;
+source.hidden=false;source.replaceChildren();const link=document.createElement('a');link.href=match.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Image file, credits and license on Wikimedia Commons';source.appendChild(link);
+}
+function show(){if(!pool.length)return;const idx=pool[pos],token=++displayedToken;q.textContent=D[idx][1];a.textContent=D[idx][2]+'\\n\\nWhy it matters: '+D[idx][3];a.hidden=true;c.textContent='Question '+(pos+1)+' / '+pool.length+' · '+D[idx][0];pic.hidden=true;pic.removeAttribute('src');imageStatus.textContent='Searching Wikimedia Commons for an artwork image…';source.hidden=true;source.replaceChildren();loadImage(idx,token)}
 u.onchange=refresh;document.getElementById('reveal').onclick=()=>a.hidden=!a.hidden;document.getElementById('next').onclick=()=>{pos=(pos+1)%pool.length;show()};document.getElementById('prev').onclick=()=>{pos=(pos+pool.length-1)%pool.length;show()};document.getElementById('shuffle').onclick=()=>{for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}pos=0;show()};refresh();
 </script></html>
