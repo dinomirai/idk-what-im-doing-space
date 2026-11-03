@@ -8,11 +8,26 @@
 
 ## Open the study materials
 
-- **[Interactive artwork quiz with images](quiz.html)** — download the HTML file and open it in a browser to use the controls; GitHub file preview shows HTML source rather than running it. Artwork previews are searched live from Wikimedia Commons when online; no match is guaranteed, and you should cross-check uncertain results against course slides.
+- **[Open runnable interactive artwork quiz](https://raw.githack.com/dinomirai/idk-what-im-doing-space/main/art-history-midterm/quiz.html)** (third-party HTML preview) or [download HTML](quiz.html); GitHub's normal source view does not execute it. Artwork previews are searched live from Wikimedia Commons when online; no match is guaranteed, and you should cross-check uncertain results against course slides.
 - **[Printable two-sided 3×5 index card](index-card.html)** — download and open in a browser, then Print → Save as PDF at actual size; or copy by hand.
 - **[Complete written study guide](README.md)** — everything below is readable directly on GitHub, without attachments.
 
 **Access note:** The generated PDF binaries from the earlier chat have not been uploaded here. Their full core study content is instead available as readable text and printable/browser HTML. The original textbook is not redistributed.
+
+## See the artwork images now
+
+**[OPEN THE ACTUAL QUIZ IN YOUR BROWSER](https://raw.githack.com/dinomirai/idk-what-im-doing-space/main/art-history-midterm/quiz.html)** — this runs the HTML instead of showing GitHub source. A first-time security/confirmation page may appear because this is a third-party preview service. Alternatively use **Download raw** and open the HTML locally.
+
+**Start with the three Davids.** The thumbnails below are real artwork reference photographs or scans, not generated substitutes. If a thumbnail does not display, select its text link to see the source file.
+
+| Donatello: won | Michelangelo: waits | Bernini: throws |
+|---|---|---|
+| ![Donatello, David, bronze](https://commons.wikimedia.org/wiki/Special:Redirect/file/Bronze_David_by_Donatello-Bargello.jpg?width=250) | ![Michelangelo, David, marble](https://upload.wikimedia.org/wikipedia/commons/8/88/Michelangelo%27s_David_with_pedestal.jpg) | ![Bernini, David, marble](https://commons.wikimedia.org/wiki/Special:Redirect/file/Bernini%27s_David.jpg?width=250) |
+| [Donatello image + attribution](https://commons.wikimedia.org/wiki/File:Bronze_David_by_Donatello-Bargello.jpg) | [Michelangelo image + attribution](https://commons.wikimedia.org/wiki/File:Michelangelo%27s_David_with_pedestal.jpg) | [Bernini image + attribution](https://commons.wikimedia.org/wiki/File:Bernini%27s_David.jpg) |
+
+**Giotto — Lamentation:** ![Giotto, Lamentation fresco](https://smarthistory.org/wp-content/uploads/2015/12/50181592513_23f8bfd94a_o.jpg) [Image source and analysis](https://smarthistory.org/introduction-to-late-gothic-art/).
+
+**Image coverage status:** The quiz has four manually linked artwork references and attempts to search Wikimedia Commons for the remaining works. Those automated searches depend on a live internet connection and may be blocked or have no trustworthy match. This is not yet a fully verified 61-image atlas. Never trust an automatically matched thumbnail if it disagrees with the professor's artwork slide.
 
 ## First — the emergency plan
 
