@@ -1,21 +1,23 @@
-# Baby's First Web Class — VIS 412 midterm
+# Baby's First Web Class — Web Design 412 midterm
 
-Two versions of Zahra's HTML and CSS project. Both contain ten lessons and work without a server, installation, JavaScript or a framework.
+Zahra's completed beginner tutorial keeps the original retro browser design and uses only basic HTML and CSS.
 
-## Download the complete projects
+**[Download the complete grading ZIP](https://github.com/dinomirai/idk-what-im-doing-space/raw/refs/heads/main/midterm/downloads/zahra-midterm-clean.zip)**
 
-- [Download the clean grading ZIP](https://github.com/dinomirai/idk-what-im-doing-space/raw/refs/heads/main/midterm/downloads/zahra-midterm-clean.zip)
-- [Download the ARG ZIP](https://github.com/dinomirai/idk-what-im-doing-space/raw/refs/heads/main/midterm/downloads/zahra-midterm-arg.zip)
+Extract the whole ZIP, then open `index.html` in a current browser. Keep `style.css` and the `images` folder beside the HTML files. No installation or server is required. If GitHub shows the ZIP's file page, choose **Download raw**.
 
-Extract the entire ZIP, then open `index.html` in a current browser. Keep the images and fonts folders beside the HTML files. If GitHub opens the ZIP's file page, click **Download raw** (the download icon).
+**[Browse the finished source files](clean/)**
 
-## Browse or edit the source
+The submission includes:
 
-- [Clean grading version](clean/) — credited to Zahra, with one stylesheet and no fictional characters, hidden story pages or horror assets.
-- [ARG version](arg/) — retains Mac/Kay, the hidden story pages and the supplied horror material. `run.html` and `style copy.css` are unchanged from the uploaded project.
+- 15 HTML pages with shared navigation and one external stylesheet.
+- Ten lessons with objectives, explanations, code, demonstrations, practice and revealable answers.
+- A glossary, FAQ, resources and reflection.
+- A sourced explanation of the researched `details` / `summary` HTML technique.
+- Local PNG images and plain text submission documents.
 
-Each folder contains `READ-ME.txt`, a reflection draft and `teacher-checklist.txt`. Read and personalise the reflection before submission.
+Read [the reflection](clean/reflection.txt) and personalise it to accurately describe your experience before submitting. [The teacher checklist](clean/teacher-checklist.txt) maps the requirements to the actual files.
 
-The supplied commercial plays using ordinary HTML video controls. It has no supplied captions. Its written visual description is not a verified soundtrack transcript. The teaching pages were checked for valid HTML, working local links, narrow-screen layout, keyboard interaction and video playback; the intentionally preserved horror page is excluded from the correctness claim.
+The source passed HTML and CSS checks. Browser checks covered all pages, 459 local links and jump targets, image loading, the complete lesson path, keyboard controls, labelled input, and page widths from 320px to desktop. External references were not exhaustively link-checked. The managed browser required a temporary local HTTP preview for rendering checks; the project itself uses relative links and has no server dependency.
 
-The repository's original Node/Express sample remains separate from these static website files. Clicking an HTML file on GitHub shows its source; download and extract a ZIP to view the website locally.
+The repository's Node/Express sample and other projects are separate from this HTML/CSS submission. Clicking an HTML file on GitHub displays its source; download the ZIP to use the website.

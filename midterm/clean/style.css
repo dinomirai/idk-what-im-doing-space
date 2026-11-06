@@ -1,222 +1,390 @@
-/* One shared stylesheet. Plain colours, borders, margins and padding. */
-@font-face {
-	font-family: "Old Windows";
-	src: url("fonts/ms-sans-serif-1.otf.woff2") format("woff2");
-}
+/* Shared design system: navy, blue, grey, cream and a pale yellow note.
+   Body 18px; page title 32px; section 25px; small text 16px.
+   Repeated spacing uses 8px, 12px, 16px and 24px. */
 body {
-	background-color: #3b6ea5;
-	color: #000000;
-	font-family: "Times New Roman", serif;
-	font-size: 18px;
-	line-height: 1.5;
-	margin: 16px;
+    background-color: #3b6ea5;
+    color: #141414;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 16px;
 }
-.warning {
-	background-color: #fff7bf;
-	border: 1px solid #000000;
-	font-family: Arial, sans-serif;
-	font-size: 14px;
-	padding: 4px 8px;
-	margin: 0 auto 12px auto;
-	max-width: 920px;
+img {
+    max-width: 100%;
+    height: auto;
 }
-/* Light top/left borders and dark bottom/right borders make a raised frame. */
+.project-bar {
+    background-color: #fff7bf;
+    border: 1px solid #000080;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    max-width: 1020px;
+    padding: 8px 12px;
+    margin: 0 auto 12px;
+    box-sizing: border-box;
+}
+.project-bar a {
+    display: inline-block;
+    padding: 4px 8px;
+}
+/* Opposite light and dark borders make the old browser frame. */
 .ie-window {
-	background-color: #d4d0c8;
-	border-top: 3px solid #ffffff;
-	border-left: 3px solid #ffffff;
-	border-right: 3px solid #555555;
-	border-bottom: 3px solid #555555;
-	max-width: 940px;
-	margin: 0 auto;
+    background-color: #d4d0c8;
+    border-top: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    border-right: 3px solid #555555;
+    border-bottom: 3px solid #555555;
+    max-width: 1020px;
+    margin: 0 auto;
 }
 .title-bar {
-	background-color: #000080;
-	color: #ffffff;
-	font-family: "Old Windows", Tahoma, Arial, sans-serif;
-	font-size: 16px;
-	padding: 4px 6px;
+    background-color: #000080;
+    color: #ffffff;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px 8px;
 }
 .ie-icon {
-	width: 20px;
-	height: 20px;
-	vertical-align: middle;
-	margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 .window-decor {
-	float: right;
-	color: #000000;
-	background-color: #d4d0c8;
-	border: 1px outset #ffffff;
-	padding: 0 5px;
+    float: right;
+    color: #000000;
+    background-color: #d4d0c8;
+    border: 1px outset #ffffff;
+    padding: 0 5px;
+    margin-left: 8px;
+}
+.title-bar::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 .menu-bar, .toolbar, .address-bar, .status-bar {
-	font-family: "Old Windows", Tahoma, Arial, sans-serif;
-	font-size: 14px;
-	padding: 5px 8px;
-	border-bottom: 1px solid #808080;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16px;
+    padding: 6px 8px;
+    border-bottom: 1px solid #808080;
 }
 .menu-bar {
-	word-spacing: 12px;
+    word-spacing: 10px;
 }
 .toolbar a {
-	margin-right: 14px;
+    display: inline-block;
+    padding: 4px 8px;
+    margin-right: 8px;
 }
 .address {
-	background-color: #ffffff;
-	border: 2px inset #eeeeee;
-	padding: 2px 8px;
-	overflow-wrap: break-word;
+    background-color: #ffffff;
+    border: 2px inset #eeeeee;
+    padding: 2px 8px;
+    overflow-wrap: break-word;
 }
-/* The browser frame is decoration. The real links work normally. */
 .browser-content {
-	background-color: #fffde9;
-	border: 2px inset #eeeeee;
-	margin: 5px;
-	padding: 16px;
+    background-color: #fffde9;
+    border: 2px inset #eeeeee;
+    margin: 5px;
+    padding: 24px;
 }
 .site-heading {
-	text-align: center;
-	color: #000080;
-	border-bottom: 3px double #000080;
-	padding-bottom: 12px;
-	margin-bottom: 18px;
+    text-align: center;
+    color: #000080;
+    border-bottom: 3px double #000080;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
 }
 .site-heading p {
-	margin: 4px 0;
+    margin: 4px 0;
+}
+.site-title, h1 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.25;
 }
 h1 {
-	font-size: 32px;
-	line-height: 1.2;
-	margin: 8px 0;
+    color: #000080;
+    margin: 8px 0 16px;
 }
 h2 {
-	font-size: 25px;
-	line-height: 1.3;
-	margin-top: 24px;
-}
-h3 {
-	font-size: 20px;
-	margin-top: 20px;
+    font-size: 25px;
+    line-height: 1.3;
+    margin: 32px 0 12px;
 }
 p {
-	margin: 12px 0;
+    margin: 12px 0;
+}
+li {
+    margin-bottom: 8px;
+}
+ul, ol {
+    padding-left: 28px;
 }
 a {
-	color: #0000bb;
+    color: #0000bb;
+    text-decoration: underline;
 }
 a:visited {
-	color: #551a8b;
+    color: #551a8b;
 }
 a:hover {
-	text-decoration: none;
+    background-color: #fff0a6;
 }
-a:focus {
-	outline: 3px solid #000080;
+/* A visible outline supports keyboard navigation; do not remove it. */
+a:focus, summary:focus, input:focus, pre:focus {
+    outline: 3px solid #000080;
+    outline-offset: 2px;
 }
-/* Float sidebar. */
+/* Desktop columns use a float; the footer clears the sidebar. */
 .sidebar {
-	float: left;
-	width: 23%;
-	background-color: #e6e6fa;
-	border: 1px solid #000080;
-	padding: 8px;
-	box-sizing: border-box;
+    float: left;
+    width: 24%;
+    background-color: #e6e6fa;
+    border: 1px solid #000080;
+    padding: 12px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
 }
-.sidebar p {
-	margin: 4px 0 10px 0;
+.directory-label {
+    margin: 8px 0;
 }
-.sidebar a {
-	display: block;
-	margin: 8px 0;
+.directory {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+}
+.directory li {
+    margin: 0;
+}
+.directory a {
+    display: block;
+    padding: 8px 6px;
+    border: 2px solid transparent;
+}
+.directory a[aria-current="page"] {
+    border-color: #000080;
+    background-color: #ffffff;
+    color: #000080;
+    font-weight: bold;
+}
+.current-label {
+    font-weight: normal;
 }
 .lesson {
-	margin-left: 27%;
+    margin-left: 28%;
+    overflow-wrap: break-word;
 }
-.page-footer {
-	clear: both;
-	padding-top: 24px;
+.lesson:focus {
+    outline: 3px solid #000080;
+    outline-offset: 5px;
 }
+.position {
+    color: #3c3c56;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 0;
+}
+.page-jumps {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    border-bottom: 1px solid #808080;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+}
+.page-jumps a {
+    display: inline-block;
+    padding: 4px 0;
+}
+/* Reusable components: result boxes, objectives, checkpoints and cards. */
 .box {
-	background-color: #ffffff;
-	border: 1px solid #808080;
-	padding: 12px;
-	margin: 16px 0;
+    background-color: #ffffff;
+    border: 1px solid #808080;
+    padding: 16px;
+    margin: 16px 0;
+}
+.box h2:first-child {
+    margin-top: 0;
 }
 .note {
-	background-color: rgba(255, 221, 102, 0.25);
-	border: 1px dashed #666666;
-	padding: 10px;
+    background-color: rgba(255, 221, 102, 0.25);
+    border: 1px dashed #666666;
+    padding: 16px;
+    margin: 16px 0;
+}
+.checkpoint {
+    border-top: 3px double #000080;
+    margin-top: 32px;
 }
 pre {
-	background-color: #eeeeee;
-	border: 1px solid #808080;
-	padding: 10px;
-	overflow: auto;
-	font-size: 16px;
+    background-color: #eeeeee;
+    color: #141414;
+    border: 1px solid #808080;
+    padding: 12px;
+    overflow: auto;
+    font-size: 16px;
+    line-height: 1.6;
 }
 code {
-	font-family: "Courier New", monospace;
+    font-family: "Courier New", monospace;
 }
 .demo-title {
-	color: #000080;
-	font-size: 24px;
+    color: #000080;
+    font-size: 24px;
 }
 .demo-box {
-	border: 2px solid #000080;
-	padding: 12px;
-	margin: 12px;
+    border: 2px solid #000080;
+    padding: 12px;
+    margin: 12px;
 }
 .sample-image {
-	width: 96px;
-	height: 64px;
+    width: 96px;
+    height: auto;
+}
+.colour-sample {
+    color: #000080;
+    background-color: #fffde9;
 }
 .badge {
-	display: inline-block;
-	background-color: #d4d0c8;
-	border: 2px outset #eeeeee;
-	padding: 2px 8px;
-	font-family: "Courier New", monospace;
-	font-size: 14px;
+    display: inline-block;
+    background-color: #d4d0c8;
+    color: #141414;
+    border: 2px outset #eeeeee;
+    padding: 2px 8px;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
 }
 details {
-	background-color: #ffffff;
-	border: 1px solid #808080;
-	padding: 10px;
-	margin: 12px 0;
+    background-color: #ffffff;
+    border: 1px solid #808080;
+    padding: 12px;
+    margin: 12px 0;
 }
 summary {
-	cursor: pointer;
-	font-weight: bold;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 4px;
 }
-.small-print {
-	font-size: 15px;
+.float-house {
+    float: left;
+    width: 96px;
+    height: auto;
+    margin-right: 12px;
 }
-/* Small screen. */
-@media (max-width: 600px) {
-	body {
-		margin: 6px;
-	}
-	.sidebar {
-		float: none;
-		width: auto;
-	}
-	.lesson {
-		margin-left: 0;
-	}
-	.window-decor {
-		display: none;
-	}
+.after-float {
+    clear: both;
 }
-
-/* Examples used in the added lessons. */
-.colour-sample { color: #000080; background-color: #fffde9; }
-.float-house { float: left; width: 96px; height: auto; margin-right: 12px; }
-.after-float { clear: both; }
-/* The empty block keeps the floated image inside its parent. */
-.float-example::after { content: ""; display: block; clear: both; }
-video { max-width: 100%; height: auto; }
-input { max-width: 100%; box-sizing: border-box; font: inherit; }
-input:focus, summary:focus, pre:focus { outline: 3px solid #000080; }
-.lesson { overflow-wrap: break-word; }
-.story-image { max-width: 100%; height: auto; }
+/* Clearfix: the empty generated block contains the floated picture. */
+.float-example::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.mini-card {
+    flex: 1 1 180px;
+    border: 1px solid navy;
+    padding: 12px;
+    margin: 0;
+}
+.practice-preview {
+    background-color: #fffde9;
+    padding: 16px;
+    border: 1px solid #808080;
+}
+input {
+    max-width: 100%;
+    box-sizing: border-box;
+    font: inherit;
+    padding: 8px;
+    border: 2px solid #555555;
+}
+.course-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #d4d0c8;
+}
+.course-list span, .small-print {
+    font-size: 16px;
+}
+dt {
+    margin-top: 16px;
+}
+dd {
+    margin-left: 20px;
+}
+.lesson-pager {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: 1px solid #808080;
+    padding-top: 16px;
+    margin-top: 32px;
+}
+.lesson-pager a {
+    display: block;
+    background-color: #e6e6fa;
+    border: 1px solid #000080;
+    padding: 8px 12px;
+}
+.back-link {
+    font-size: 16px;
+    margin-top: 24px;
+}
+.back-link a {
+    display: inline-block;
+    padding: 6px 0;
+}
+.page-footer {
+    clear: both;
+    padding-top: 24px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+.page-footer p:first-child {
+    border-top: 1px solid #808080;
+    padding-top: 16px;
+}
+/* Narrow screens: keep the content order and stack the columns. */
+@media (max-width: 760px) {
+    body {
+        margin: 6px;
+    }
+    .browser-content {
+        margin: 3px;
+        padding: 16px;
+    }
+    .sidebar {
+        float: none;
+        width: auto;
+        margin-bottom: 24px;
+    }
+    .lesson {
+        margin-left: 0;
+    }
+    .directory {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .directory li {
+        width: 50%;
+    }
+    .window-decor {
+        display: none;
+    }
+    .menu-bar {
+        word-spacing: 2px;
+    }
+    .address {
+        display: block;
+    }
+}

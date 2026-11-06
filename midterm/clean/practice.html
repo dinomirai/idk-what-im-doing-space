@@ -3,60 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lesson 10: Put it together - Baby's First Web Class</title>
+    <meta name="description" content="Put it together: a beginner HTML and CSS tutorial with clear examples and practice.">
+    <title>Put it together — Baby's First Web Class</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<p class="warning">Student project for VIS 412. This is not an official learning site. <a href="#lesson">Skip to page content</a></p>
+<p class="project-bar">Web Design 412 · Zahra <a href="#lesson">Skip to page content</a></p>
 <div class="ie-window">
-    <!-- The old browser frame is decoration. Use the links below it. -->
+    <!-- Nostalgic browser decoration; navigation below contains the real links. -->
     <div class="title-bar">
         <span class="window-decor" aria-hidden="true">_ &nbsp; □ &nbsp; X</span>
-        <img class="ie-icon" src="images/internetexplorer6icon.png" alt="">
-        Baby's First Web Class - Microsoft Internet Explorer
+        <img class="ie-icon" src="images/internetexplorer6icon.png" width="20" height="20" alt="">
+        Baby's First Web Class — Internet Explorer
     </div>
     <div class="menu-bar" aria-hidden="true">File Edit View Favorites Tools Help</div>
-    <div class="toolbar"><a href="index.html">Home</a> <a href="glossary.html">Find a tag</a> <a href="resources.html">Sources</a></div>
+    <div class="toolbar"><a href="index.html">Home</a> <a href="glossary.html">Find a term</a> <a href="resources.html">Sources</a></div>
     <div class="address-bar">Address: <span class="address">babys-first-web-class / practice.html</span></div>
     <div class="browser-content">
         <header class="site-heading">
-            <h1>Baby's First Web Class</h1>
+            <p class="site-title">Baby's First Web Class</p>
             <p>~ a small place to learn the basics ~</p>
             <span class="badge">HTML + CSS | Made by Zahra</span>
         </header>
-        <!-- Same directory on the lesson and reference pages. -->
+        <!-- Keep this directory consistent across every page. -->
         <nav class="sidebar" aria-label="Main navigation">
-            <p><strong>Site directory</strong></p>
-                <a href="index.html">Home</a>
-                <a href="html.html">1. Basic HTML</a>
-                <a href="structure.html">2. Headings &amp; lists</a>
-                <a href="css.html">3. Basic CSS</a>
-                <a href="colours.html">4. Colours &amp; fonts</a>
-                <a href="links.html">5. Links &amp; images</a>
-                <a href="layout.html">6. Boxes &amp; layout</a>
-                <a href="video.html">7. Adding a video</a>
-                <a href="accessibility.html">8. Accessibility</a>
-                <a href="details.html">9. Click-open answers</a>
-                <a href="practice.html" aria-current="page">10. Put it together &lt;-- you are here</a>
-                <a href="glossary.html">Glossary</a>
-                <a href="resources.html">Resources</a>
-                <a href="faq.html">FAQ</a>
-                <a href="reflection.html">Reflection</a>
+            <p class="directory-label"><strong>Site directory</strong></p>
+            <ul class="directory"><li><a href="index.html">Home / start here</a></li></ul>
+            <p class="directory-label"><strong>Follow the lessons</strong></p>
+            <ol class="directory lessons"><li><a href="html.html">1. Basic HTML</a></li>
+<li><a href="structure.html">2. Headings &amp; lists</a></li>
+<li><a href="css.html">3. Basic CSS</a></li>
+<li><a href="colours.html">4. Colours &amp; fonts</a></li>
+<li><a href="links.html">5. Links &amp; images</a></li>
+<li><a href="layout.html">6. Boxes &amp; layout</a></li>
+<li><a href="responsive.html">7. Small screens</a></li>
+<li><a href="accessibility.html">8. Accessibility</a></li>
+<li><a href="details.html">9. Click-open answers</a></li>
+<li><a href="practice.html" aria-current="page">10. Put it together<span class="current-label"> — you are here</span></a></li></ol>
+            <p class="directory-label"><strong>Quick reference</strong></p>
+            <ul class="directory"><li><a href="glossary.html">Glossary</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="reflection.html">Reflection</a></li></ul>
         </nav>
         <main class="lesson" id="lesson" tabindex="-1">
-            <h2>Lesson 10: Put it together</h2>
+<p class="position">Lesson 10 of 10 · about 10 minutes</p>
+<h1>Lesson 10: Put it together</h1>
+<nav class="page-jumps" aria-label="On this page"><strong>On this page:</strong> <a href="#section-1">1. Make a folder</a> · <a href="#section-2">2. Make the home page</a> · <a href="#section-5">Try it</a> · <a href="#check-10">Check your understanding</a></nav>
 <p class="note"><strong>Goal:</strong> Put the basic pieces together in a small two-page practice site.</p>
 <p>You have seen the separate parts. Now make a small page about something you like: a pet, a game, a hobby or a recipe. Keep the first version small.</p>
-<h3>1. Make a folder</h3>
-<pre tabindex="0"><code>my-practice-site/
+<h2 id="section-1">1. Make a folder</h2>
+<pre tabindex="0" aria-label="Code example"><code>my-practice-site/
     index.html
     about.html
     style.css
     images/
         little-house.png</code></pre>
 <p>Copy <code>little-house.png</code> from this project's images folder into your practice images folder, or use your own picture and update its filename and alt text.</p>
-<h3>2. Make the home page</h3>
-<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
+<h2 id="section-2">2. Make the home page</h2>
+<pre tabindex="0" aria-label="Code example"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -87,8 +92,8 @@
     &lt;/footer&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h3>3. Add a few CSS rules</h3>
-<pre tabindex="0"><code>body {
+<h2 id="section-3">3. Add a few CSS rules</h2>
+<pre tabindex="0" aria-label="Code example"><code>body {
     max-width: 800px;
     margin: 20px auto;
     padding: 16px;
@@ -104,24 +109,25 @@ a {
 a:focus {
     outline: 3px solid navy;
 }</code></pre>
-<div class="box"><h3>Expected result</h3><p>A pale page with a large heading, two links, a short list and the house picture. It should be centred on a wide window and fit a narrower one.</p></div>
-<h3>4. Make the second page</h3>
+<div class="box"><h2 id="section-4">Expected result</h2><p>A pale page with a large heading, two links, a short list and the house picture. It should be centred on a wide window and fit a narrower one.</p><div class="practice-preview"><p class="demo-title"><strong>My hobby page</strong></p><p><a href="#practice-result">Home</a> | <a href="#second-page">About</a></p><p><strong>Things I like</strong></p><p>This is my practice page.</p><ul><li>Drawing little houses</li><li>Learning one tag at a time</li></ul><img src="images/little-house.png" width="96" height="64" alt="A small blue house with a yellow door"><p class="small-print">Made for practice.</p></div><p id="practice-result">This is an in-page preview. Its links jump within this lesson; your own pages will link to real HTML files after step 4.</p></div>
+<h2 id="second-page">4. Make the second page</h2>
 <p>Copy the whole HTML example into <code>about.html</code>. Change the title to “About my hobby,” change the heading and write a short paragraph. Keep the same navigation and stylesheet link on both pages.</p>
-<h3>Try it</h3><p>Open index.html and follow About, then Home. Add a details/summary question if you want another bit of practice.</p><p><strong>Check:</strong> Both links work, both pages use the same CSS, the image appears and the question opens without a script.</p>
-<h3>Before you call it done</h3>
+<h2 id="section-5">Try it</h2><p>Open index.html and follow About, then Home. Add a details/summary question, then test it with Tab and Enter.</p><p><strong>Check:</strong> Both links work, both pages use the same CSS, the image appears and the question opens without a script.</p>
+<h2 id="section-6">Before you call it done</h2>
 <ul><li>Save all files and refresh the browser.</li><li>Test every menu link and any jump links.</li><li>Read your examples and compare them with the visible results.</li><li>Check headings, alt text, keyboard focus and zoom.</li><li>Credit any reference, image or video you used.</li><li>Zip the whole folder, not just index.html. Extract it somewhere else and test it again.</li></ul>
-<h3>If it goes wrong</h3><p>Do not use a path like C:\Users\YourName\Desktop\photo.png in your HTML. It only points to your computer. Keep the file inside the project and use a relative path such as images/photo.png.</p>
+<h2 id="section-7">If it goes wrong</h2><p>Do not use a path like C:\Users\YourName\Desktop\photo.png in your HTML. It only points to your computer. Keep the file inside the project and use a relative path such as images/photo.png.</p>
 <p>That is the end of the lessons. The glossary is there when you need a reminder.</p>
-            <p><a href="details.html">&lt; Previous</a> | <a href="glossary.html">Next &gt;</a></p>
-            <p><a href="#lesson">Back to page heading</a></p>
+<!-- Optional feedback uses native HTML disclosure controls. -->
+<section class="checkpoint" aria-labelledby="check-10"><h2 id="check-10">Check your understanding</h2><p>Both practice pages look different even though you changed one CSS file. What should you check first?</p><details><summary>Show the answer</summary><p>Check that both pages link to the same <code>style.css</code> with exactly the right spelling and relative path. Save both files and refresh each page.</p></details></section>
+<nav class="lesson-pager" aria-label="Lesson navigation"><a href="details.html" rel="prev">&lt; Previous: Click-open answers</a><a href="glossary.html" rel="next">Next: Glossary &gt;</a></nav>
+<p class="back-link"><a href="#lesson">Back to page heading</a></p>
         </main>
         <footer class="page-footer">
-            <hr>
-            <p class="small-print">Baby's First Web Class | VIS 412 | Zahra</p>
-            
+            <p>Baby's First Web Class · Web Design 412 · Zahra</p>
+            <p><a href="resources.html">Sources and credits</a> · <a href="reflection.html">Project reflection</a></p>
         </footer>
     </div>
-    <div class="status-bar">Done. &nbsp; | &nbsp; Local pages. No sign-up needed.</div>
+    <div class="status-bar">Done. | Local pages. No sign-up needed.</div>
 </div>
 </body>
 </html>

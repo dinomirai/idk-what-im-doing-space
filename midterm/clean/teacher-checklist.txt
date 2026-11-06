@@ -1,51 +1,105 @@
-MIDTERM - WHERE TO FIND THINGS
+WEB DESIGN 412 — REQUIREMENTS AND RUBRIC EVIDENCE
+Baby's First Web Class | Zahra R.
 
-10 lessons, plus home, glossary, resources, FAQ, reflection and video description.
-The main menu is repeated in plain HTML, with previous/next lesson links.
+This maps the work to the supplied requirements; it does not predict a grade.
 
-CHECKLIST
-1. Semantic structure: header, nav, main and footer on normal pages.
-2. Heading/paragraph hierarchy: every lesson.
-3. Ordered and unordered lists: structure.html and the home lesson list.
-4. Anchors: shared navigation.
-5. Page jump links and IDs: skip link on each normal page, glossary sections.
-6. External links: resources.html and accessibility.html.
-7. Images with alt: links.html and accessibility.html.
-8. Reused classes: box, note, sidebar and demo-box.
-9. Structural IDs: lesson, terms, quick-copy and image-example.
-10. Margin and padding: css.html and layout.html.
-11. Float, clear and clearfix: layout.html, with live example and CSS.
-12. Container centring with margin auto: ie-window and layout.html example.
-13. Background styling: desktop, frame, page and note boxes.
-14. RGBA colour: note background; explained in colours.html.
-15. HTML and CSS comments: frame, navigation, floats and caption example.
-16. Small PNG and image format explanation: links.html (333-byte house).
-Flex/Grid is not used; it is one option, not a requirement to use every item.
-No claim is made that Photoshop/Figma were used.
+REQUIRED FILES AND STRUCTURE
+[x] At least 4 pages: 15 HTML pages including home, 10 lessons and 4 references.
+[x] Working shared navigation: same directory on all pages; current-page label.
+[x] One external stylesheet: every page links to style.css; no inline CSS.
+[x] Consistent design system: documented palette, type sizes and spacing in CSS.
+[x] Local images folder: both PNG assets included; relative file paths.
+[x] Local use: extract the ZIP and open index.html; no build or installation.
+[x] Only HTML and CSS: no scripts, libraries, frameworks or remote fonts.
+[x] Written reflection: reflection.txt and reflection.html answer all 4 prompts.
 
-EXTRA RESEARCHED TECHNIQUE
-Native details/summary control: details.html (lesson 9), with MDN reference.
-Confirm this was not covered in your class.
+TECHNICAL CHECKLIST — 17 LISTED TECHNIQUES DEMONSTRATED
+1. Semantic page structure: header, nav, main and footer on every page;
+   explained in html.html and structure.html.
+2. Headings and paragraph hierarchy: one page-specific h1, then h2 sections;
+   explained in structure.html.
+3. Ordered and unordered lists: learning path and examples in structure.html.
+4. Anchor links: all directories and named previous/next links.
+5. Internal jump links: skip link, on-page navigation, image-example in links.html.
+6. External links: MDN and W3C references in links.html and resources.html.
+7. Images with alt attributes: useful descriptions on the house image;
+   empty alt on the decorative browser icon; explained in accessibility.html.
+8. Repeated classes: box, note, checkpoint, demo-box, mini-card and others.
+9. IDs for structural sections: lesson, section headings and checkpoint sections.
+10. Box model: margin, padding and borders; explanation and demo in layout.html.
+11. Float, clear and clearfix: sidebar and footer plus the floated house demo;
+    layout.html explains the ::after clearfix with its full CSS.
+12. Flexbox: wrapping card-row demo in layout.html and the lesson pager in CSS.
+13. Margin-auto centering: ie-window; explanation and .page example in layout.html.
+14. Background styling: desktop, frame, lesson, result and note backgrounds.
+15. RGBA colour: note background; explained in colours.html.
+16. HTML and CSS comments: explain browser decoration, shared directory,
+    design system, keyboard focus, layout and clearfix; structure.html teaches them.
+17. Appropriate image format and size: local 96x64 PNG drawing and 32x32 PNG
+    icon; links.html explains PNG versus JPEG and appropriate image dimensions.
+    No claim is made that Photoshop or Figma was used.
 
-OPTIONAL ENHANCEMENTS
-Common mistake sections; glossary; reusable example/note classes.
+INDEPENDENTLY RESEARCHED TECHNIQUE
+details.html (lesson 9): native details and summary disclosure controls.
+Includes objective, source citation, complete code, live example, the open
+attribute, keyboard instructions, practice and a check answer.
+Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
+The supplied checklist does not include this technique. The student should
+confirm it was not previously covered in their own class.
 
-DESIGN SYSTEM
-Body: 18px; main heading: 32px; section: 25px; subheading: 20px.
-Blue/grey frame and pale cream/lavender backgrounds.
-Repeated 12px example padding and 16px example margins.
-One small-screen media query changes the float sidebar to a full-width menu.
+INSTRUCTIONAL DESIGN
+[x] Prerequisites and setup: index.html and lesson 1; no prior coding expected.
+[x] Logical progression: 10 numbered lessons; named previous and next links.
+[x] Each lesson: objective, explanation, code, demo, practice and feedback.
+[x] Code has visible results or a directly observable demonstration.
+[x] Practice questions: optional answers use native HTML disclosure controls.
+[x] Cumulative activity: practice.html builds a separate two-page practice site.
+    The four-page minimum applies to this 15-page tutorial, not that exercise.
 
-REFLECTION
-reflection.html and reflection.txt answer all four questions. Personalise before submission.
+OPTIONAL ENHANCEMENTS (ALL THREE INCLUDED)
+[x] Common mistakes and fixes throughout lessons, plus faq.html.
+[x] Glossary page with definitions, lesson links and quick-copy examples.
+[x] Reusable components using shared classes, including boxes, notes and cards.
 
-MEDIA LIMITATION
-The supplied commercial has no captions or verified audio transcript.
-video-notes.html describes the pictures only. This does NOT establish
-full WCAG conformance. The embedding lesson is also entirely written out.
-The source/rights of the supplied font and some assets need checking
-before public distribution.
+ACCESSIBILITY EVIDENCE
+[x] English document language and viewport metadata on every page.
+[x] 18px body text, consistent headings and comfortable line spacing.
+[x] Dark text on pale backgrounds; underlined links; current page has text
+    and border cues in addition to colour.
+[x] Visible focus outlines on links, summaries, inputs and code boxes.
+[x] First-page skip link targets the focusable main element.
+[x] Useful alt text, decorative empty alt, and explicit image dimensions.
+[x] Label for="visitor-name" matches the input ID in accessibility.html.
+[x] Narrow-screen layout stacks the columns; code boxes scroll separately.
+[x] No autoplay, flashing effects or uncaptioned video.
+These are basic accessibility measures, not a claim of full WCAG certification.
 
-CLEAN VERSION
-Exactly one CSS file. No run.html, horror stylesheet, story pages, fictional
-characters, story clues, altered story image or eyes background.
+RUBRIC MAP
+Structure of Learning: explicit beginner prerequisites; numbered learning path;
+  increasingly complex lessons; a cumulative practice task.
+Learning Format: short written explanations, selectable code, visible results,
+  images and self-check feedback; no video or sound required.
+Navigation and Organization: consistent directory, current-page marker,
+  previous/next links, skip link, section links, glossary and FAQ.
+Clarity of Explanation: objectives, small examples, definitions, common
+  mistakes, expected results and practice questions.
+Friction and Frustration: offline use, no account or installation, manageable
+  sections, readable code boxes and a responsive layout.
+Accessibility: text alternatives, readable typography and colour pairs,
+  labelled input, visible keyboard focus and meaningful headings/link labels.
+
+COMPLETED VERIFICATION
+- All 15 pages passed the HTML validator; the shared CSS parsed successfully
+  and its property values passed the CSS grammar check.
+- Browser checks resolved 459 local links and jump targets and loaded all
+  19 image instances, including repeated decorative icons.
+- The named next links followed all 10 lessons and reached the glossary.
+- The skip link focused main; Enter and Space operated native details;
+  clicking the input label focused the matching field.
+- Layouts had no page-wide overflow at 320, 390, 760, 1024 and 1280 pixels.
+- Representative home, layout and practice pages passed enlarged-text checks.
+- Checked text/background pairs exceeded 4.5:1 contrast.
+- The managed browser blocked file:// navigation, so rendering checks used a
+  temporary local HTTP preview. The submission uses relative links and plain
+  assets, with no server dependency. External references were not exhaustively
+  link-checked. These checks are not a full accessibility certification.

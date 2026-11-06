@@ -1,17 +1,17 @@
-Reflection draft by Zahra. Read it through and change anything that does not match your own decisions before submitting.
-
+PROJECT REFLECTION — ZAHRA R.
+Web Design 412
 
 Who is the intended learner?
-This site is for someone who is new to HTML and CSS, or who has used them but forgets the tags. I know what that is like, so I wanted the examples to stay visible. The learner needs to know how to make a folder, save a text file and open it in a browser.
+This tutorial is for a beginner who has not written HTML or CSS before, or someone who needs short reminders. It assumes only that the learner can make a folder, save a plain text file and open it in a browser. The first lesson starts with a complete small HTML page instead of assuming familiarity with tags.
 
+Why this instructional format?
+The site uses short text explanations, selectable code, small image demonstrations and visible results. A learner can work at their own pace, compare code with its output and change one thing at a time. Every lesson includes practice and a question with a revealable answer. The core teaching stays visible; optional answers provide feedback without revealing the answer before the learner tries.
 
-Why this format?
-I mainly used short text lessons with code and a visible example. A learner can copy one small part, save it and check what changed. I added a local video as an example of embedding media. The lesson itself is written out, so the video is optional. The supplied clip does not have captions, which is a limitation I would need to fix for accessible publication.
+How does navigation guide the learning process?
+The same directory appears on every page. Ten numbered lessons move from HTML structure to CSS, links, layout, small screens, accessibility and a final practice site. A current-page label shows where the learner is, and named previous and next links provide a step-by-step route. Page jump links, a glossary, an FAQ and a skip link make it easier to find a section or return to the lesson content.
 
+What design choices make the site easier to understand?
+The retro browser frame gives the site a consistent identity, while the lesson area uses dark text, pale backgrounds and familiar fonts. The same heading sizes, spacing, borders and reusable box classes appear throughout. Code examples are separated from results, and objectives and practice checks use repeated patterns. The directory stacks above the lesson on narrow screens. Underlined links, useful image alternatives and visible keyboard focus support different ways of using the site.
 
-How does navigation help?
-The same menu is on the lesson pages. The numbered lessons go from a first HTML page to CSS, links, layout, media and accessibility. Previous and next links give a route through them. The glossary is for finding something quickly, and the skip link avoids going through the whole menu each time.
-
-
-What design choices help?
-I wanted it to look like an old personal website inside an Internet Explorer window. I kept the blue, grey and pale background, but used readable text sizes and ordinary underlined links. The heading sizes and example boxes repeat. I kept the code simple so I can open a file and see what each part does.
+Process and assistance
+The original concept was a nostalgic browser-style learning site. AI assistance helped revise instructional text, repair HTML and CSS, check local links and organise the submission materials. This version contains only HTML, one shared CSS file and local PNG images, plus plain text documentation. The independently researched technique is the native details and summary disclosure control, explained and sourced in lesson 9.
